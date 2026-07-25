@@ -118530,7 +118530,7 @@ break}s=3
 return A.n(A.amw(),$async$zH)
 case 3:o=b
 if(o==null||o.length===0){s=1
-break}if(o!=="20260724085604")p.sqw(!0)
+break}if(o!=="20260725100126")p.sqw(!0)
 case 1:return A.v(q,r)}})
 return A.w($async$zH,r)},
 l(){var s=this.r
@@ -119437,8 +119437,8 @@ j=l.f
 i=l.w
 i=n?$.bX().b6(i.a/100):"R$ \u2022\u2022\u2022"
 i=A.A(k+" \xb7 "+j+"x de "+i,g,g,g,g,q,g,g,g)
-j=l.c
-s.push(A.iB(!1,B.a9,g,g,!0,g,g,g,!0,g,g,g,g,g,g,new A.b6W(p,m,l),!1,g,g,g,g,A.A("Desde "+(B.n.c0(B.r.j(A.aQ(j)),2,"0")+"/"+B.n.c0(B.r.j(A.ag(j)),2,"0")+"/"+A.ah(j)),g,g,g,g,r,g,g,g),g,i,g,p.anC(l,o.n(0,l.a)),g))}f=A.b1(s,B.S,B.G,B.L)}return f},
+j=l.y
+s.push(A.iB(!1,B.a9,g,g,!0,g,g,g,!0,g,g,g,g,g,g,new A.b6W(p,m,l),!1,g,g,g,g,A.A("Vence "+(B.n.c0(B.r.j(A.aQ(j)),2,"0")+"/"+B.n.c0(B.r.j(A.ag(j)),2,"0")+"/"+A.ah(j)),g,g,g,g,r,g,g,g),g,i,g,p.anC(l,o.n(0,l.a)),g))}f=A.b1(s,B.S,B.G,B.L)}return f},
 $S:678}
 A.b6W.prototype={
 $0(){return A.dx(this.b).e2("/emprestimos/"+this.c.a+"?from=/clientes/"+this.a.e.a,null)},
@@ -121266,7 +121266,7 @@ k=A.A("Vers\xe3o 1.0.0 \xb7 Flutter + Supabase",h,h,h,h,l,h,h,h)
 if(l==null)l=h
 else{j=A.p(a).ax
 i=j.rx
-l=l.bD(i==null?j.k3:i)}return A.h6(f,A.cf(new A.cT(B.n4,A.kY(A.b([d,B.b_,new A.ce(c,B.bn,h,h),B.bs,B.aaq,s,B.b_,B.bmE,B.bs,r,B.b_,B.bmI,B.bs,B.bod,q,B.b_,B.bof,B.bs,p,B.b_,B.bmG,B.bs,o,B.b_,B.bmF,B.bs,e,B.b_,new A.ce(A.bE(A.b([n,B.fa,A.c2(A.b1(A.b([m,k,A.A("Build 20260724085604",h,h,h,h,l,h,h,h)],b),B.aU,B.G,B.L),1)],b),B.S,B.G,B.L,0),B.bn,h,h)],b),B.bh,h,h,!1),h),h,h),h,h)}}
+l=l.bD(i==null?j.k3:i)}return A.h6(f,A.cf(new A.cT(B.n4,A.kY(A.b([d,B.b_,new A.ce(c,B.bn,h,h),B.bs,B.aaq,s,B.b_,B.bmE,B.bs,r,B.b_,B.bmI,B.bs,B.bod,q,B.b_,B.bof,B.bs,p,B.b_,B.bmG,B.bs,o,B.b_,B.bmF,B.bs,e,B.b_,new A.ce(A.bE(A.b([n,B.fa,A.c2(A.b1(A.b([m,k,A.A("Build 20260725100126",h,h,h,h,l,h,h,h)],b),B.aU,B.G,B.L),1)],b),B.S,B.G,B.L,0),B.bn,h,h)],b),B.bh,h,h,!1),h),h,h),h,h)}}
 A.arH.prototype={
 $1(a){return this.a.c1($.bfW().gkh(),t.vl).n_(a.gac(a))},
 $S:744}
