@@ -118667,7 +118667,7 @@ break}s=3
 return A.o(A.amC(),$async$zI)
 case 3:o=b
 if(o==null||o.length===0){s=1
-break}if(o!=="20260729101146")p.sqw(!0)
+break}if(o!=="20260731083211")p.sqw(!0)
 case 1:return A.v(q,r)}})
 return A.w($async$zI,r)},
 l(){var s=this.r
@@ -120687,7 +120687,7 @@ $S:159}
 A.zB.prototype={}
 A.EV.prototype={
 eb(a,b){var s=A.p(a),r=b.an($.an8(),t.v1),q=this.f,p=q==null?null:A.hg(b.an($.Ae().$1(q.a),t._I))
-return A.h7(!0,new A.aA(B.bh,A.eu(r,new A.aZK(this,A.hg(b.an($.byJ().$1(this.e.a),t.rT)),p,s.ok,a),new A.aZL(),new A.aZM(),!1,!0,!1,t.I4,t.jK),null),!0,!1,B.a9,!0,!0)},
+return A.h7(!0,new A.aA(B.bh,A.eu(r,new A.aZK(this,p,A.hg(b.an($.byJ().$1(this.e.a),t.rT)),s.ok,a),new A.aZL(),new A.aZM(),!1,!0,!1,t.I4,t.jK),null),!0,!1,B.a9,!0,!0)},
 Fn(a,b){return this.arF(a,b)},
 arF(a,b){var s=0,r=A.x(t.H),q=1,p=[],o,n,m,l,k,j,i
 var $async$Fn=A.t(function(c,d){if(c===1){p.push(d)
@@ -120732,12 +120732,12 @@ o=t.N
 q=A.a5(["cliente",d,"parcela",""+b,"valor",$.bR().b0((s.a-p.a)/100),"vencimento",A.d6(c.e),"pix",a1.a],o,o)}n=f.f
 m=new A.aZN(f)
 b=A.b([m.$3(g,B.agc,g)],t.nn)
-s=i.b
-if(s!=null&&J.io(s))b.push(m.$3("Resumo das parcelas",B.ag6,A.bLk(e,s)))
-if(n!=null&&i.c!=null){s=n.at!=null?"Renegocia\xe7\xe3o":"Novo empr\xe9stimo"
-b.push(m.$3(s,B.afZ,A.bLj(e,n,i.c)))}if(a0)b.push(m.$3("Parcela vence hoje",B.afD,A.btt(a1.c,q)))
+if(n!=null&&i.b!=null){s=n.at!=null?"Renegocia\xe7\xe3o":"Novo empr\xe9stimo"
+b.push(m.$3(s,B.afZ,A.bLj(e,n,i.b)))}if(a0)b.push(m.$3("Parcela vence hoje",B.afD,A.btt(a1.c,q)))
 if(a0)b.push(m.$3("Lembrete de pagamento",B.afO,A.btt(a1.d,q)))
 if(r!=null)b.push(new A.zB("Recibo (PDF)",B.Go,"Gera o recibo em PDF e abre o compartilhamento (escolha o WhatsApp).",new A.aZH(d,r)))
+s=i.c
+if(s!=null&&J.io(s))b.push(m.$3("Resumo das parcelas",B.ag6,A.bLk(e,s)))
 e=i.d
 e=A.b([A.z("Enviar pelo WhatsApp",h,h,h,h,e.r,h,h,h),B.bQ,A.z(d+" \xb7 toque para abrir seu WhatsApp com a mensagem pronta.",h,h,h,h,e.Q,h,h,h),B.aa],t.p)
 for(s=b.length,p=i.e,l=0;l<b.length;b.length===s||(0,A.D)(b),++l){k=b[l]
@@ -121449,7 +121449,7 @@ k=A.z("Vers\xe3o 1.0.0 \xb7 Flutter + Supabase",h,h,h,h,l,h,h,h)
 if(l==null)l=h
 else{j=A.p(a).ax
 i=j.rx
-l=l.bp(i==null?j.k3:i)}return A.h8(f,A.cf(new A.cT(B.n4,A.l0(A.b([d,B.aW,new A.ce(c,B.bg,h,h),B.bs,B.aat,s,B.aW,B.bmN,B.bs,r,B.aW,B.bmR,B.bs,B.bom,q,B.aW,B.boo,B.bs,p,B.aW,B.bmP,B.bs,o,B.aW,B.bmO,B.bs,e,B.aW,new A.ce(A.bD(A.b([n,B.fb,A.c2(A.b_(A.b([m,k,A.z("Build 20260729101146",h,h,h,h,l,h,h,h)],b),B.aQ,B.G,B.L),1)],b),B.S,B.G,B.L,0),B.bg,h,h)],b),B.bh,h,h,!1),h),h,h),h,h)}}
+l=l.bp(i==null?j.k3:i)}return A.h8(f,A.cf(new A.cT(B.n4,A.l0(A.b([d,B.aW,new A.ce(c,B.bg,h,h),B.bs,B.aat,s,B.aW,B.bmN,B.bs,r,B.aW,B.bmR,B.bs,B.bom,q,B.aW,B.boo,B.bs,p,B.aW,B.bmP,B.bs,o,B.aW,B.bmO,B.bs,e,B.aW,new A.ce(A.bD(A.b([n,B.fb,A.c2(A.b_(A.b([m,k,A.z("Build 20260731083211",h,h,h,h,l,h,h,h)],b),B.aQ,B.G,B.L),1)],b),B.S,B.G,B.L,0),B.bg,h,h)],b),B.bh,h,h,!1),h),h,h),h,h)}}
 A.arN.prototype={
 $1(a){return this.a.c1($.bgl().gki(),t.vl).n_(a.gac(a))},
 $S:746}
