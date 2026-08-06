@@ -34747,103 +34747,105 @@ this.b=b},
 bg_:function bg_(a,b){this.a=a
 this.b=b},
 bg1:function bg1(a){this.a=a},
-bPu(c5,c6,c7,c8,c9,d0,d1,d2,d3,d4,d5,d6,d7){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,b0,b1,b2,b3,b4,b5,b6=null,b7="J\xe1 deu lucro de ",b8=c5.a,b9=d7.a,c0=b8+b9,c1=new A.aS(c0),c2=b9/100,c3=d0.a/100,c4=d2.a/100
-b9=d1.a
-s=b9===0
-r=s?c3:b9/100
-b9=d4.a
-q=b9<0
-p=!q&&b9!==0
-b9=t.s
-o=A.b([],b9)
-n=A.b([],b9)
-b9=c9.a
-if(b9===0&&c9.f===0){if(p)o.push(b7+A.mJ(d4))
+bPu(c6,c7,c8,c9,d0,d1,d2,d3,d4,d5,d6,d7,d8){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,b0,b1,b2,b3,b4,b5,b6,b7=null,b8="J\xe1 deu lucro de ",b9=c6.a,c0=d8.a,c1=b9+c0,c2=new A.aS(c1),c3=c0/100,c4=d1.a/100,c5=d3.a/100
+c0=d2.a
+s=c0===0
+r=s?c4:c0/100
+c0=d5.a
+q=c0<0
+p=!q&&c0!==0
+c0=t.s
+o=A.b([],c0)
+n=A.b([],c0)
+c0=d0.a
+if(c0===0&&d0.f===0){if(p)o.push(b8+A.mJ(d5))
 n.push("Sem hist\xf3rico de parcelas para avaliar")
-return new A.WQ(b6,b6,b6,B.b4N,"Sem hist\xf3rico suficiente \u2014 avalie no seu crit\xe9rio.",o,n,c1)}m=c9.gIf()?3:10
-l=c9.f
-k=c9.x
-j=c9.Q
-i=d5/10-B.q.cl(l*m,0,30)-B.q.cl(k*5,0,15)-B.q.cl(j*5,0,10)
-h=c9.e
-if(h*c9.gJJ()>10)i-=5
+return new A.WQ(b7,b7,b7,B.b4N,"Sem hist\xf3rico suficiente \u2014 avalie no seu crit\xe9rio.",o,n,c2)}m=d0.gIf()?3:10
+l=d0.f
+k=d0.x
+j=d0.Q
+i=d6/10-B.q.cl(l*m,0,30)-B.q.cl(k*5,0,15)-B.q.cl(j*5,0,10)
+h=d0.e
+if(h*d0.gJJ()>10)i-=5
 if(p)i+=5
-g=c9.gym()
+g=d0.gym()
 f=g!=null
 e=f&&g<=-0.25
 d=f&&g>=0.25
 if(e)i-=6
 if(d)i+=4
-c=c3>0
-b=c&&c2>r
-a=c&&c2>c3
-a0=c&&c2>c3*2
-if(a)a1=0+(20+B.o.cl((c2/c3-1)*40,0,70))
-else if(b){a2=c3-r
-a1=0+B.o.cl((a2>0?(c2-r)/a2:1)*20,0,20)}else a1=0
-a3=c0/100
-a4=c&&a3>c3*1.5
-if(a4)a1+=B.o.cl((a3/c3-1.5)*15,0,25)
-c0=c4>0
-a5=c0&&c2>c4
-a6=c0&&c2>c4*2
-if(a5)a1+=B.o.cl((c2/c4-1)*10,0,15)
-a7=c8>=2
-if(a7)a1+=B.q.cl((c8-1)*5,0,20)
-a8=c?c2/c3:1
-i-=a1*(1-0.5*B.o.cl((d5-500)/400,0,1)*B.o.cl(1-(a8-1)/2,0,1))
-a9=d6>=5&&c9.w>=3
-if(a9)i+=2
-b0=d3>=12
-if(b0&&h*c9.gJJ()<=3)i+=2
-b1=b9+l
-b2=b1<4
-b3=B.o.aC(B.o.cl(b2?i*0.75+12.5:i,0,99))
-if(b3>=70)b4=B.b4J
-else if(b3>=50)b4=B.b4K
-else{f=b3>=30?B.b4L:B.b4M
-b4=f}if(d5>=550)o.push("Score "+d5+" ("+c7.gdk().toLowerCase()+")")
-if(b9>0){b5=B.o.aC(100*c9.c/b9)
-if(b5>=70)o.push(""+b5+"% das parcelas pagas em dia")}f=c9.w
+c=c4>0
+b=c&&c3>r
+a=c&&c3>c4
+a0=c&&c3>c4*2
+if(a)a1=0+(20+B.o.cl((c3/c4-1)*40,0,70))
+else if(b){a2=c4-r
+a1=0+B.o.cl((a2>0?(c3-r)/a2:1)*20,0,20)}else a1=0
+a3=c1/100
+a4=c&&a3>c4*1.5
+if(a4)a1+=B.o.cl((a3/c4-1.5)*15,0,25)
+c1=c5>0
+a5=c1&&c3>c5
+a6=c1&&c3>c5*2
+if(a5)a1+=B.o.cl((c3/c5-1)*10,0,15)
+a7=c9>=2
+if(a7)a1+=B.q.cl((c9-1)*5,0,20)
+if(c)a8=c4
+else a8=c1?c5:0
+a9=a8>0?c3/a8:1
+i-=a1*(1-0.5*B.o.cl((d6-500)/400,0,1)*B.o.cl(1-(a9-1)/2,0,1))
+b0=d7>=5&&d0.w>=3
+if(b0)i+=2
+b1=d4>=12
+if(b1&&h*d0.gJJ()<=3)i+=2
+b2=c0+l
+b3=b2<4
+b4=B.o.aC(B.o.cl(b3?i*0.75+12.5:i,0,99))
+if(b4>=70)b5=B.b4J
+else if(b4>=50)b5=B.b4K
+else{f=b4>=30?B.b4L:B.b4M
+b5=f}if(d6>=550)o.push("Score "+d6+" ("+c8.gdk().toLowerCase()+")")
+if(c0>0){b6=B.o.aC(100*d0.c/c0)
+if(b6>=70)o.push(""+b6+"% das parcelas pagas em dia")}f=d0.w
 if(f>0)o.push(""+f+" empr\xe9stimo(s) j\xe1 quitado(s)")
-if(p)o.push(b7+A.mJ(d4))
-if(c&&!b)o.push(s?"Valor dentro do hist\xf3rico (j\xe1 teve at\xe9 "+A.mJ(d0)+")":"Valor dentro do que costuma pegar (m\xe9dia "+A.mJ(d1)+")")
-if(a9)o.push("Cliente recorrente ("+d6+" empr\xe9stimos)")
-if(b0&&h*c9.gJJ()<=3)o.push(A.bOS(d3))
-if(d)o.push("Vem melhorando: "+c9.at+" das \xfaltimas "+c9.as+" em dia")
-if(c0&&!a5)o.push("Dentro da sua m\xe9dia de empr\xe9stimos ("+A.mJ(d2)+")")
-if(l>0){c0=c9.gIf()?" (atraso leve, at\xe9 3 dias)":" (maior: "+c9.r+" dias)"
-n.push(""+l+" parcela(s) atrasada(s) AGORA"+c0)}if(k>0)n.push(""+k+" promessa(s) de pagamento quebrada(s)")
-c0=c9.y
-if(c0>0)n.push(""+c0+" promessa(s) quebrada(s) h\xe1 mais de 1 ano")
-if(h>0&&c9.gKQ()>0)n.push("Atrasou "+c9.gKQ()+" de "+b9+" parcelas (~"+h+" dia(s) quando atrasa)")
+if(p)o.push(b8+A.mJ(d5))
+if(c&&!b)o.push(s?"Valor dentro do hist\xf3rico (j\xe1 teve at\xe9 "+A.mJ(d1)+")":"Valor dentro do que costuma pegar (m\xe9dia "+A.mJ(d2)+")")
+if(b0)o.push("Cliente recorrente ("+d7+" empr\xe9stimos)")
+if(b1&&h*d0.gJJ()<=3)o.push(A.bOS(d4))
+if(d)o.push("Vem melhorando: "+d0.at+" das \xfaltimas "+d0.as+" em dia")
+if(c1&&!a5)o.push("Dentro da sua m\xe9dia de empr\xe9stimos ("+A.mJ(d3)+")")
+if(l>0){c1=d0.gIf()?" (atraso leve, at\xe9 3 dias)":" (maior: "+d0.r+" dias)"
+n.push(""+l+" parcela(s) atrasada(s) AGORA"+c1)}if(k>0)n.push(""+k+" promessa(s) de pagamento quebrada(s)")
+c1=d0.y
+if(c1>0)n.push(""+c1+" promessa(s) quebrada(s) h\xe1 mais de 1 ano")
+if(h>0&&d0.gKQ()>0)n.push("Atrasou "+d0.gKQ()+" de "+c0+" parcelas (~"+h+" dia(s) quando atrasa)")
 if(j>0)n.push("J\xe1 precisou renegociar "+j+" vez(es)")
-if(e)n.push("Vem piorando: s\xf3 "+c9.at+" das \xfaltimas "+c9.as+" em dia")
-if(q)n.push("Ainda est\xe1 no vermelho ("+A.mJ(d4)+")")
-if(b8!==0)n.push("J\xe1 tem "+A.mJ(c5)+" em aberto com voc\xea")
-if(a4)n.push("D\xedvida total iria a "+A.mJ(c1)+" \u2014 acima do que ele j\xe1 carregou ("+A.mJ(d0)+")")
-if(a7)n.push(""+c8+" empr\xe9stimos em aberto ao mesmo tempo")
-if(b2)n.push("Hist\xf3rico ainda curto ("+b1+" movimenta\xe7\xf5es)")
-if(a6)n.push("Bem acima da sua m\xe9dia de empr\xe9stimos ("+A.mJ(d2)+")")
-if(a0)n.push("Pedido bem acima do maior que j\xe1 teve ("+A.mJ(d0)+")")
-else if(a)n.push("Pedido acima do maior que j\xe1 teve ("+A.mJ(d0)+")")
-else if(b&&!s)n.push("Acima do que costuma pegar (m\xe9dia "+A.mJ(d1)+")")
-switch(b4.a){case 0:b8="Baixo risco \u2014 hist\xf3rico bom, empr\xe9stimo recomendado."
+if(e)n.push("Vem piorando: s\xf3 "+d0.at+" das \xfaltimas "+d0.as+" em dia")
+if(q)n.push("Ainda est\xe1 no vermelho ("+A.mJ(d5)+")")
+if(b9!==0)n.push("J\xe1 tem "+A.mJ(c6)+" em aberto com voc\xea")
+if(a4)n.push("D\xedvida total iria a "+A.mJ(c2)+" \u2014 acima do que ele j\xe1 carregou ("+A.mJ(d1)+")")
+if(a7)n.push(""+c9+" empr\xe9stimos em aberto ao mesmo tempo")
+if(b3)n.push("Hist\xf3rico ainda curto ("+b2+" movimenta\xe7\xf5es)")
+if(a6)n.push("Bem acima da sua m\xe9dia de empr\xe9stimos ("+A.mJ(d3)+")")
+if(a0)n.push("Pedido bem acima do maior que j\xe1 teve ("+A.mJ(d1)+")")
+else if(a)n.push("Pedido acima do maior que j\xe1 teve ("+A.mJ(d1)+")")
+else if(b&&!s)n.push("Acima do que costuma pegar (m\xe9dia "+A.mJ(d2)+")")
+switch(b5.a){case 0:b9="Baixo risco \u2014 hist\xf3rico bom, empr\xe9stimo recomendado."
 break
-case 1:b8="Risco moderado \u2014 pode emprestar, mas com aten\xe7\xe3o."
+case 1:b9="Risco moderado \u2014 pode emprestar, mas com aten\xe7\xe3o."
 break
-case 2:b8="Risco alto \u2014 muito cuidado antes de emprestar."
+case 2:b9="Risco alto \u2014 muito cuidado antes de emprestar."
 break
-case 3:b8="Risco muito alto \u2014 recomenda-se n\xe3o emprestar."
+case 3:b9="Risco muito alto \u2014 recomenda-se n\xe3o emprestar."
 break
-case 4:b8=""
+case 4:b9=""
 break
-default:b8=b6}b9=A.bOP(c6,b3,a8)
-c0=c6.aSW(b3)
-s=c6.a
+default:b9=b7}c0=A.bOP(c7,b4,a9)
+c1=c7.aSW(b4)
+s=c7.a
 if(s.length!==0)B.o.aC(J.bA(B.l.gak(s),1))
 if(s.length!==0)B.o.aC(J.bA(B.l.ga8(s),1))
-return new A.WQ(b3,b9,c0,b4,b8,o,n,c1)},
+return new A.WQ(b4,c0,c1,b5,b9,o,n,c2)},
 bOP(a,b,c){var s=a.aTb(b),r=c-2
 if(r<=0)return s
 return B.q.cl(B.o.aC(s*(1/(1+r*0.15))),0,99)},
@@ -119736,7 +119738,7 @@ break}s=3
 return A.m(A.W_(),$async$zX)
 case 3:o=b
 if(o==null||o.length===0){s=1
-break}if(o!=="20260806185213")p.smP(!0)
+break}if(o!=="20260806185625")p.smP(!0)
 case 1:return A.u(q,r)}})
 return A.v($async$zX,r)},
 Is(){var s=0,r=A.w(t.NY),q,p=this,o
@@ -119746,7 +119748,7 @@ return A.m(A.W_(),$async$Is)
 case 3:o=b
 if(o==null||o.length===0){q=B.b8M
 s=1
-break}if(o==="20260806185213"){q=B.b8K
+break}if(o==="20260806185625"){q=B.b8K
 s=1
 break}p.smP(!0)
 q=B.b8L
@@ -123259,7 +123261,7 @@ k=A.q("Vers\xe3o 1.0.0 \xb7 Flutter + Supabase",h,h,h,h,l,h,h,h)
 if(l==null)l=h
 else{j=A.p(a).ax
 i=j.rx
-l=l.bf(i==null?j.k3:i)}return A.hh(f,A.ch(new A.cP(B.nc,A.iQ(A.b([d,B.aL,new A.cc(c,B.b7,h,h),B.bu,B.aaZ,s,B.aL,B.bo1,B.bu,r,B.aL,B.bo6,B.bu,B.bpE,q,B.aL,B.bpG,B.bu,p,B.aL,B.bo4,B.bu,o,B.aL,B.bo3,B.bu,e,B.aL,new A.cc(A.aT(A.b([A.bg(A.b([n,B.ed,A.bI(A.aT(A.b([m,k,A.q("Build 20260806185213",h,h,h,h,l,h,h,h)],b),B.aP,B.E,B.I),1)],b),B.M,B.E,B.I,0,h),B.bh,B.bnB],b),B.aP,B.E,B.I),B.b7,h,h)],b),h,B.b8,h,h,!1),h),h,h),h,h)}}
+l=l.bf(i==null?j.k3:i)}return A.hh(f,A.ch(new A.cP(B.nc,A.iQ(A.b([d,B.aL,new A.cc(c,B.b7,h,h),B.bu,B.aaZ,s,B.aL,B.bo1,B.bu,r,B.aL,B.bo6,B.bu,B.bpE,q,B.aL,B.bpG,B.bu,p,B.aL,B.bo4,B.bu,o,B.aL,B.bo3,B.bu,e,B.aL,new A.cc(A.aT(A.b([A.bg(A.b([n,B.ed,A.bI(A.aT(A.b([m,k,A.q("Build 20260806185625",h,h,h,h,l,h,h,h)],b),B.aP,B.E,B.I),1)],b),B.M,B.E,B.I,0,h),B.bh,B.bnB],b),B.aP,B.E,B.I),B.b7,h,h)],b),h,B.b8,h,h,!1),h),h,h),h,h)}}
 A.asC.prototype={
 $1(a){return this.a.bl($.bjo().ghC(),t.vl).n4(a.ga8(a))},
 $S:769}
