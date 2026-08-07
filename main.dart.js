@@ -34760,7 +34760,7 @@ n=A.b([],c0)
 c0=d0.a
 if(c0===0&&d0.f===0){if(p)o.push(b8+A.mJ(d5))
 n.push("Sem hist\xf3rico de parcelas para avaliar")
-return new A.WQ(b7,b7,b7,B.b4N,"Sem hist\xf3rico suficiente \u2014 avalie no seu crit\xe9rio.",o,n,c2)}m=d0.gIf()?3:10
+return new A.WQ(b7,b7,b7,!1,B.b4N,"Sem hist\xf3rico suficiente \u2014 avalie no seu crit\xe9rio.",o,n,c2)}m=d0.gIf()?3:10
 l=d0.f
 k=d0.x
 j=d0.Q
@@ -34845,7 +34845,7 @@ c1=c7.aSW(b4)
 s=c7.a
 if(s.length!==0)B.o.aC(J.bA(B.l.gak(s),1))
 if(s.length!==0)B.o.aC(J.bA(B.l.ga8(s),1))
-return new A.WQ(b4,c0,c1,b5,b9,o,n,c2)},
+return new A.WQ(b4,c0,c1,a9>2,b5,b9,o,n,c2)},
 bOP(a,b,c){var s=a.aTb(b),r=c-2
 if(r<=0)return s
 return B.q.cl(B.o.aC(s*(1/(1+r*0.15))),0,99)},
@@ -34857,7 +34857,7 @@ xW:function xW(a,b){this.a=a
 this.b=b},
 o9:function o9(a,b){this.a=a
 this.b=b},
-WQ:function WQ(a,b,c,d,e,f,g,h){var _=this
+WQ:function WQ(a,b,c,d,e,f,g,h,i){var _=this
 _.a=a
 _.b=b
 _.c=c
@@ -34865,7 +34865,8 @@ _.f=d
 _.r=e
 _.w=f
 _.x=g
-_.y=h},
+_.y=h
+_.z=i},
 bQb(a){var s,r,q,p,o=a.a
 if(o===0&&a.f===0)return 500
 if(o>0){s=10*(a.e*a.gJJ())
@@ -119738,7 +119739,7 @@ break}s=3
 return A.m(A.W_(),$async$zX)
 case 3:o=b
 if(o==null||o.length===0){s=1
-break}if(o!=="20260806185625")p.smP(!0)
+break}if(o!=="20260807072723")p.smP(!0)
 case 1:return A.u(q,r)}})
 return A.v($async$zX,r)},
 Is(){var s=0,r=A.w(t.NY),q,p=this,o
@@ -119748,7 +119749,7 @@ return A.m(A.W_(),$async$Is)
 case 3:o=b
 if(o==null||o.length===0){q=B.b8M
 s=1
-break}if(o==="20260806185625"){q=B.b8K
+break}if(o==="20260807072723"){q=B.b8K
 s=1
 break}p.smP(!0)
 q=B.b8L
@@ -123261,7 +123262,7 @@ k=A.q("Vers\xe3o 1.0.0 \xb7 Flutter + Supabase",h,h,h,h,l,h,h,h)
 if(l==null)l=h
 else{j=A.p(a).ax
 i=j.rx
-l=l.bf(i==null?j.k3:i)}return A.hh(f,A.ch(new A.cP(B.nc,A.iQ(A.b([d,B.aL,new A.cc(c,B.b7,h,h),B.bu,B.aaZ,s,B.aL,B.bo1,B.bu,r,B.aL,B.bo6,B.bu,B.bpE,q,B.aL,B.bpG,B.bu,p,B.aL,B.bo4,B.bu,o,B.aL,B.bo3,B.bu,e,B.aL,new A.cc(A.aT(A.b([A.bg(A.b([n,B.ed,A.bI(A.aT(A.b([m,k,A.q("Build 20260806185625",h,h,h,h,l,h,h,h)],b),B.aP,B.E,B.I),1)],b),B.M,B.E,B.I,0,h),B.bh,B.bnB],b),B.aP,B.E,B.I),B.b7,h,h)],b),h,B.b8,h,h,!1),h),h,h),h,h)}}
+l=l.bf(i==null?j.k3:i)}return A.hh(f,A.ch(new A.cP(B.nc,A.iQ(A.b([d,B.aL,new A.cc(c,B.b7,h,h),B.bu,B.aaZ,s,B.aL,B.bo1,B.bu,r,B.aL,B.bo6,B.bu,B.bpE,q,B.aL,B.bpG,B.bu,p,B.aL,B.bo4,B.bu,o,B.aL,B.bo3,B.bu,e,B.aL,new A.cc(A.aT(A.b([A.bg(A.b([n,B.ed,A.bI(A.aT(A.b([m,k,A.q("Build 20260807072723",h,h,h,h,l,h,h,h)],b),B.aP,B.E,B.I),1)],b),B.M,B.E,B.I,0,h),B.bh,B.bnB],b),B.aP,B.E,B.I),B.b7,h,h)],b),h,B.b8,h,h,!1),h),h,h),h,h)}}
 A.asC.prototype={
 $1(a){return this.a.bl($.bjo().ghC(),t.vl).n4(a.ga8(a))},
 $S:769}
@@ -127846,7 +127847,7 @@ s=s.dz("analises_risco")
 r=o.a.d
 q=A.bP(o.z.a)
 p=A.bP(100)
-s.kW(0,A.a6(["cliente_id",r.a.a,"valor_pedido",A.eb(new A.be(q,0).gcc().cb(0,new A.be(p,0).gcc()),null).ai(0,2),"nota",n.a,"prob_quitar",n.b,"nivel",n.f.b,"score",o.Q,"fatores",o.as],t.N,t.X)).ck(new A.aUf(),t.P).hJ(new A.aUg())}s=o.w
+s.kW(0,A.a6(["cliente_id",r.a.a,"valor_pedido",A.eb(new A.be(q,0).gcc().cb(0,new A.be(p,0).gcc()),null).ai(0,2),"nota",n.a,"prob_quitar",n.b,"nivel",n.r.b,"score",o.Q,"fatores",o.as],t.N,t.X)).ck(new A.aUf(),t.P).hJ(new A.aUg())}s=o.w
 s.a5$=$.a7()
 s.V$=0
 o.av()},
@@ -127867,7 +127868,7 @@ q=i.w
 j=A.kU(q.a.a)
 if(j==null)j=B.aJ
 return new A.ar(new A.an(0,0,0,A.bm(a,B.dM,t.l).w.f.d),A.fo(!0,new A.ar(B.b8,A.DV(A.aT(A.b([A.q("An\xe1lise de risco",h,h,h,h,s.r,h,h,h),B.bn,A.q(p.b,h,h,h,h,s.Q,h,h,h),B.a3,A.dP(h,B.aX,!0,h,!0,B.D,h,A.dH(),q,h,h,h,h,h,2,B.aig,B.ah,!0,h,!0,h,!1,h,B.aV,h,h,h,h,B.eD,h,h,h,1,h,h,!1,"\u2022",h,new A.aUb(i),h,h,h,!1,h,h,!1,h,!0,h,B.b4,h,h,h,h,h,h,h,h,h,h,h,h,!0,B.au,h,B.aA,h,h,h,h),B.a3,A.ej(n,new A.aUc(i,j,s,m,r,l,k,a,g),new A.aUd(s),new A.aUe(),!1,!0,!1,t.p5,t.o)],t.p),B.aT,B.E,B.az),h,B.ah,h,h,B.bj),h),!0,!1,B.a4,!0,!0),h)},
-aE8(a,b,c,d){var s,r,q,p,o,n,m,l,k,j,i=null,h=d.f
+aE8(a,b,c,d){var s,r,q,p,o,n,m,l,k,j,i=null,h=d.r
 switch(h.a){case 0:s=b.a
 break
 case 1:s=b.d
@@ -127888,8 +127889,10 @@ n=o==null
 o=n?"\u2014":A.k(o)+"%"
 m=c.c
 r=A.q(o,i,i,i,i,m==null?i:m.xe(r.ax.k3,B.e5),i,i,i)
-o=n?"sem hist\xf3rico":"de chance de pagar (calibrado no seu hist\xf3rico)"
-n=c.Q
+A:{if(n){o="sem hist\xf3rico"
+break A}if(d.f){o="de chance de pagar \u2014 valor acima do que seu hist\xf3rico cobre, estimativa pouco confi\xe1vel"
+break A}o="de chance de pagar (calibrado no seu hist\xf3rico)"
+break A}n=c.Q
 o=A.q(o,i,i,i,i,n,B.bM,i,i)
 h=h.gdk()
 m=c.as
@@ -127900,15 +127903,15 @@ h=d.a
 if(h!=null){r=n==null?i:n.bf(b.y)
 B.l.P(s,A.b([B.bn,A.q("Nota "+A.k(h)+"/100 \xb7 perda hist\xf3rica nesta faixa: ~"+A.k(d.c)+"% do valor",i,i,i,i,r,B.bM,i,i)],m))}h=A.fg(i,A.aT(s,B.M,B.E,B.I),B.a5,i,i,new A.dr(q,i,i,p,i,i,B.bT),i,i,i,i,B.b7,i,i,i)
 s=c.z
-r=A.q(d.r,i,i,i,i,s,i,i,i)
-q=$.bG().aJ(d.y.a/100)
+r=A.q(d.w,i,i,i,i,s,i,i,i)
+q=$.bG().aJ(d.z.a/100)
 p=n==null
 o=p?i:n.bf(b.y)
 o=A.b([h,B.bh,r,B.bh,A.q("D\xedvida total com voc\xea se emprestar: "+q,i,i,i,i,o,i,i,i)],m)
-h=d.w
+h=d.x
 if(h.length!==0){r=A.b([B.a3,A.q("A FAVOR",i,i,i,i,c.ax,i,i,i),B.bn],m)
 for(q=h.length,l=b.a,k=0;k<h.length;h.length===q||(0,A.C)(h),++k){j=h[k]
-r.push(new A.ar(B.yZ,A.bg(A.b([A.cq(B.Gx,l,i,18),B.c0,new A.q3(1,B.i7,A.q(j,i,i,i,i,s,i,i,i),i)],m),B.aP,B.E,B.I,0,i),i))}B.l.P(o,r)}h=d.x
+r.push(new A.ar(B.yZ,A.bg(A.b([A.cq(B.Gx,l,i,18),B.c0,new A.q3(1,B.i7,A.q(j,i,i,i,i,s,i,i,i),i)],m),B.aP,B.E,B.I,0,i),i))}B.l.P(o,r)}h=d.y
 if(h.length!==0){r=A.b([B.a3,A.q("ATEN\xc7\xc3O",i,i,i,i,c.ax,i,i,i),B.bn],m)
 for(q=h.length,l=b.r,k=0;k<h.length;h.length===q||(0,A.C)(h),++k){j=h[k]
 r.push(new A.ar(B.yZ,A.bg(A.b([A.cq(B.GV,l,i,18),B.c0,new A.q3(1,B.i7,A.q(j,i,i,i,i,s,i,i,i),i)],m),B.aP,B.E,B.I,0,i),i))}B.l.P(o,r)}o.push(B.aL)
