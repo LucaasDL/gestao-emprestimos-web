@@ -121876,7 +121876,7 @@ break}s=3
 return A.i(A.X8(),$async$AA)
 case 3:o=b
 if(o==null||o.length===0){s=1
-break}if(o!=="20261013154836")p.skK(!0)
+break}if(o!=="20261013212415")p.skK(!0)
 case 1:return A.t(q,r)}})
 return A.u($async$AA,r)},
 Jj(){var s=0,r=A.v(t.NY),q,p=this,o
@@ -121886,7 +121886,7 @@ return A.i(A.X8(),$async$Jj)
 case 3:o=b
 if(o==null||o.length===0){q=B.baw
 s=1
-break}if(o==="20261013154836"){q=B.bau
+break}if(o==="20261013212415"){q=B.bau
 s=1
 break}p.skK(!0)
 q=B.bav
@@ -125898,7 +125898,7 @@ k=A.o("Vers\xe3o 1.0.0 \xb7 Flutter + Supabase",h,h,h,h,l,h,h,h)
 if(l==null)l=h
 else{j=A.n(a).ax
 i=j.rx
-l=l.aH(i==null?j.k3:i)}return A.ex(f,A.bQ(new A.cG(B.nB,A.hS(A.b([d,B.as,new A.bK(c,B.aJ,h,h),B.b3,B.ac1,s,B.as,B.bqo,B.b3,r,B.as,B.bqt,B.b3,B.bs6,q,B.as,B.bs8,B.b3,p,B.as,B.bqr,B.b3,o,B.as,B.bqq,B.b3,e,B.as,new A.bK(A.au(A.b([A.aT(A.b([n,B.cz,A.b6(A.au(A.b([m,k,A.o("Build 20261013154836",h,h,h,h,l,h,h,h)],b),B.av,B.w,B.F),1)],b),B.J,B.w,B.F,0,h),B.aF,B.bpY],b),B.av,B.w,B.F),B.aJ,h,h)],b),h,B.aW,h,h,!1),h),h,h),h,h)}}
+l=l.aH(i==null?j.k3:i)}return A.ex(f,A.bQ(new A.cG(B.nB,A.hS(A.b([d,B.as,new A.bK(c,B.aJ,h,h),B.b3,B.ac1,s,B.as,B.bqo,B.b3,r,B.as,B.bqt,B.b3,B.bs6,q,B.as,B.bs8,B.b3,p,B.as,B.bqr,B.b3,o,B.as,B.bqq,B.b3,e,B.as,new A.bK(A.au(A.b([A.aT(A.b([n,B.cz,A.b6(A.au(A.b([m,k,A.o("Build 20261013212415",h,h,h,h,l,h,h,h)],b),B.av,B.w,B.F),1)],b),B.J,B.w,B.F,0,h),B.aF,B.bpY],b),B.av,B.w,B.F),B.aJ,h,h)],b),h,B.aW,h,h,!1),h),h,h),h,h)}}
 A.auq.prototype={
 $1(a){return this.a.aJ($.boD().geG(),t.vl).i7(a.ga9(a))},
 $S:792}
@@ -129304,9 +129304,9 @@ l=A.bQ(A.au(A.b([A.o(o.an(r.d.a/100),d,d,d,d,c.z.aH(n),d,d,d),A.o("por m\xeas \u
 k=A.fJ(a,"M\xe9dia dos 12 \xfaltimos meses",o.an(r.e.a/100),d,!1)
 j=A.fJ(a,"Este m\xeas at\xe9 agora",o.an(r.a.a/100),d,!1)
 i=A.fJ(a,"Proje\xe7\xe3o deste m\xeas",o.an(r.c.a/100),d,!0)
-h=B.o.aD(r.b*100)
+h=B.o.aD(100-r.b*100)
 s=s==null?d:s.aH(c.y)
-s=A.o("Estimado a partir de "+h+"% do m\xeas que costuma estar pago neste dia. Firma com o passar dos dias.",d,d,d,d,s,d,d,d)
+s=A.o("O que j\xe1 entrou, mais o que a m\xe9dia espera dos "+h+"% que faltam do m\xeas. Firma com o passar dos dias.",d,d,d,d,s,d,d,d)
 h=r.w.a
 g=A.fJ(a,"Realizado no ano",o.an(h/100),d,!1)
 f=r.f
