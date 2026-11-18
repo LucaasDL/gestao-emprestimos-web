@@ -124784,7 +124784,7 @@ break}s=3
 return A.h(A.Ym(),$async$B_)
 case 3:o=b
 if(o==null||o.length===0){s=1
-break}if(o!=="20261117220101")p.skq(!0)
+break}if(o!=="20261117221449")p.skq(!0)
 case 1:return A.r(q,r)}})
 return A.t($async$B_,r)},
 K3(){var s=0,r=A.u(t.NY),q,p=this,o
@@ -124794,7 +124794,7 @@ return A.h(A.Ym(),$async$K3)
 case 3:o=b
 if(o==null||o.length===0){q=B.bdD
 s=1
-break}if(o==="20261117220101"){q=B.bdB
+break}if(o==="20261117221449"){q=B.bdB
 s=1
 break}p.skq(!0)
 q=B.bdC
@@ -129224,7 +129224,7 @@ k=A.j("Vers\xe3o 1.0.0 \xb7 Flutter + Supabase",h,h,h,h,l,h,h,h)
 if(l==null)l=h
 else{j=A.k(a).ax
 i=j.rx
-l=l.an(i==null?j.k3:i)}return A.ee(f,A.bD(new A.cU(B.nX,A.hI(A.b([d,B.al,new A.bz(c,B.aG,h,h),B.aW,B.ac4,s,B.al,B.btK,B.aW,r,B.al,B.btP,B.aW,B.bvv,q,B.al,B.bvx,B.aW,p,B.al,B.btN,B.aW,o,B.al,B.btM,B.aW,e,B.al,new A.bz(A.as(A.b([A.aJ(A.b([n,B.co,A.b1(A.as(A.b([m,k,A.j("Build 20261117220101",h,h,h,h,l,h,h,h)],b),B.at,B.w,B.D),1)],b),B.H,B.w,B.D,0,h),B.aw,B.btj],b),B.at,B.w,B.D),B.aG,h,h)],b),h,B.aU,h,h,!1),h),h,h),h,h)}}
+l=l.an(i==null?j.k3:i)}return A.ee(f,A.bD(new A.cU(B.nX,A.hI(A.b([d,B.al,new A.bz(c,B.aG,h,h),B.aW,B.ac4,s,B.al,B.btK,B.aW,r,B.al,B.btP,B.aW,B.bvv,q,B.al,B.bvx,B.aW,p,B.al,B.btN,B.aW,o,B.al,B.btM,B.aW,e,B.al,new A.bz(A.as(A.b([A.aJ(A.b([n,B.co,A.b1(A.as(A.b([m,k,A.j("Build 20261117221449",h,h,h,h,l,h,h,h)],b),B.at,B.w,B.D),1)],b),B.H,B.w,B.D,0,h),B.aw,B.btj],b),B.at,B.w,B.D),B.aG,h,h)],b),h,B.aU,h,h,!1),h),h,h),h,h)}}
 A.awi.prototype={
 $1(a){return this.a.aD($.bsH().gey(),t.vl).ii(a.ga4(a))},
 $S:822}
@@ -133031,9 +133031,9 @@ A.aMJ.prototype={
 gaZK(){var s=this.y
 if(s==null||s.a===0)return null
 return this.a.a/s.a-1},
-gaZL(){var s=this.z
-if(s==null||s.a===0)return null
-return this.c.a/s.a-1}}
+gaZL(){var s=this.d.a
+if(s===0)return null
+return this.c.a/s-1}}
 A.of.prototype={}
 A.a99.prototype={}
 A.mJ.prototype={
@@ -133338,9 +133338,9 @@ A.H7.prototype={
 C(a){var s=null
 return A.hI(A.b([B.DG,A.j(u.L,s,s,s,s,A.k(a).ok.z,B.aS,s,s),B.aw,A.bD(A.nY(B.k2,B.eD,this.c,s),s,s)],t.p),s,B.aU,B.dJ,s,!1)}}
 A.akC.prototype={
-C(b2){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0,a1,a2,a3,a4,a5,a6,a7=null,a8="do m\xeas passado",a9=t.v,b0=t.e,b1=b0.a(A.k(b2).c.h(0,A.aw(a9)))
-b1.toString
-s=A.k(b2)
+C(b1){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0,a1,a2,a3,a4,a5,a6,a7=null,a8=t.v,a9=t.e,b0=a9.a(A.k(b1).c.h(0,A.aw(a8)))
+b0.toString
+s=A.k(b1)
 r=this.c
 q=r.e
 p=q.x.a
@@ -133358,61 +133358,60 @@ f=A.ad(g)===1?a7:B.et[A.ad(g)-2]
 e=q.gaZK()
 d=q.gaZL()
 if(e!=null){c=B.o.am(Math.abs(e)*100)
-b=f==null?a8:"de "+f
+b=f==null?"do m\xeas passado":"de "+f
 r=q.z
 a=r==null?".":", que fechou em "+$.b2().X(r.a/100)+"."
 if(c===0)a0="No mesmo ponto "+b+a
 else{r=e<0?"abaixo":"acima"
 a0=""+c+"% "+r+" do mesmo ponto "+b+a}}else a0=a7
 r=$.b2()
-m=b1.a
+m=b0.a
 s=s.ok.Q
 a1=t.p
-a2=A.b([A.bD(A.as(A.b([A.j(r.X(q.d.a/100),a7,a7,a7,a7,b1.z.an(m),a7,a7,a7),A.j("por m\xeas \u2014 m\xe9dia dos 3 \xfaltimos meses fechados",a7,a7,a7,a7,s,B.aS,a7,a7)],a1),B.H,B.w,B.D),a7,a7),B.lV,A.cS(b2,"M\xe9dia dos 12 \xfaltimos meses",r.X(q.e.a/100),a7,!1),A.cS(b2,"Este m\xeas at\xe9 agora",r.X(q.a.a/100),a7,!1)],a1)
+a2=A.b([A.bD(A.as(A.b([A.j(r.X(q.d.a/100),a7,a7,a7,a7,b0.z.an(m),a7,a7,a7),A.j("por m\xeas \u2014 m\xe9dia dos 3 \xfaltimos meses fechados",a7,a7,a7,a7,s,B.aS,a7,a7)],a1),B.H,B.w,B.D),a7,a7),B.lV,A.cS(b1,"M\xe9dia dos 12 \xfaltimos meses",r.X(q.e.a/100),a7,!1),A.cS(b1,"Este m\xeas at\xe9 agora",r.X(q.a.a/100),a7,!1)],a1)
 a3=q.y
-if(a3!=null)a2.push(A.cS(b2,"No m\xeas passado, at\xe9 o mesmo dia",r.X(a3.a/100),b1.y,!1))
-if(a0!=null)a2.push(new A.aa(B.ix,A.j(a0,a7,a7,a7,a7,s==null?a7:s.an(b1.y),a7,a7,a7),a7))
-a2.push(A.cS(b2,"Proje\xe7\xe3o deste m\xeas",r.X(q.c.a/100),a7,!0))
-if(d!=null){a9=b0.a(A.k(b2).c.h(0,A.aw(a9)))
-a9.toString
-b0=A.k(b2)
+if(a3!=null)a2.push(A.cS(b1,"No m\xeas passado, at\xe9 o mesmo dia",r.X(a3.a/100),b0.y,!1))
+if(a0!=null)a2.push(new A.aa(B.ix,A.j(a0,a7,a7,a7,a7,s==null?a7:s.an(b0.y),a7,a7,a7),a7))
+a2.push(A.cS(b1,"Proje\xe7\xe3o deste m\xeas",r.X(q.c.a/100),a7,!0))
+if(d!=null){a8=a9.a(A.k(b1).c.h(0,A.aw(a8)))
+a8.toString
+a9=A.k(b1)
 c=B.o.am(Math.abs(d)*100)
-b=f==null?a8:"de "+f
-if(c===0){a4=a9.y
-a5="Se fechar assim, no mesmo n\xedvel "+b+"."
-a6=B.aho}else{a3="Se fechar assim, "+c
-if(d<0){a4=a9.d
-a5=a3+"% abaixo "+b+"."
-a6=B.ahn}else{a4=a9.a
-a5=a3+"% acima "+b+"."
-a6=B.ahp}}a9=A.bk(a6,a4,a7,18)
-b0=b0.ok.Q
-a2.push(new A.aa(B.iw,A.aJ(A.b([a9,B.h7,A.b1(A.j(a5,a7,a7,a7,a7,b0==null?a7:b0.l6(a4,B.bR),a7,a7,a7),1)],a1),B.H,B.w,B.D,0,a7),a7))}a9=B.o.am(100-q.b*100)
-b0=s==null
-a1=b0?a7:s.an(b1.y)
-a2.push(new A.aa(B.ix,A.j("O que j\xe1 entrou, mais o que a m\xe9dia espera dos "+a9+"% que faltam do m\xeas. Firma com o passar dos dias.",a7,a7,a7,a7,a1,a7,a7,a7),a7))
+if(c===0){a4=a8.y
+a5=B.aho
+a6="Se fechar assim, no mesmo n\xedvel da m\xe9dia de 3 meses."}else{a3="Se fechar assim, "+c
+if(d<0){a4=a8.d
+a6=a3+"% abaixo da m\xe9dia de 3 meses."
+a5=B.ahn}else{a4=a8.a
+a6=a3+"% acima da m\xe9dia de 3 meses."
+a5=B.ahp}}a8=A.bk(a5,a4,a7,18)
+a9=a9.ok.Q
+a2.push(new A.aa(B.iw,A.aJ(A.b([a8,B.h7,A.b1(A.j(a6,a7,a7,a7,a7,a9==null?a7:a9.l6(a4,B.bR),a7,a7,a7),1)],a1),B.H,B.w,B.D,0,a7),a7))}a8=B.o.am(100-q.b*100)
+a9=s==null
+a1=a9?a7:s.an(b0.y)
+a2.push(new A.aa(B.ix,A.j("O que j\xe1 entrou, mais o que a m\xe9dia espera dos "+a8+"% que faltam do m\xeas. Firma com o passar dos dias.",a7,a7,a7,a7,a1,a7,a7,a7),a7))
 a2.push(B.en)
-if(i!=null){a9=h==null?"":" ("+(""+B.o.am(h*100)+"%")+")"
-a2.push(A.cS(b2,"Juros de renova\xe7\xe3o \u2014 este m\xeas"+a9,r.X(i.a/100),a7,!1))}a9=l==null?"":" ("+(""+B.o.am(l*100)+"%")+")"
-a2.push(A.cS(b2,"Juros de renova\xe7\xe3o \u2014 12 meses"+a9,r.X(n.a/100),a7,!1))
-if(k!=null){a9=k.b
-a1=a9===1?"m\xeas":"meses"
-a2.push(A.cS(b2,"Juros de renova\xe7\xe3o \u2014 m\xe9dia por m\xeas ("+a9+" "+a1+" com rolagem)",r.X(k.a.a/100),a7,!0))}a2.push(new A.aa(B.ix,A.j("Lucro sem capital novo: o cliente paga para empurrar o vencimento e o principal continua na rua. O percentual \xe9 a fatia do lucro de cada janela, e a m\xe9dia exclui os meses em que n\xe3o houve nenhuma renova\xe7\xe3o.",a7,a7,a7,a7,b0?a7:s.an(b1.y),a7,a7,a7),a7))
+if(i!=null){a8=h==null?"":" ("+(""+B.o.am(h*100)+"%")+")"
+a2.push(A.cS(b1,"Juros de renova\xe7\xe3o \u2014 este m\xeas"+a8,r.X(i.a/100),a7,!1))}a8=l==null?"":" ("+(""+B.o.am(l*100)+"%")+")"
+a2.push(A.cS(b1,"Juros de renova\xe7\xe3o \u2014 12 meses"+a8,r.X(n.a/100),a7,!1))
+if(k!=null){a8=k.b
+a1=a8===1?"m\xeas":"meses"
+a2.push(A.cS(b1,"Juros de renova\xe7\xe3o \u2014 m\xe9dia por m\xeas ("+a8+" "+a1+" com rolagem)",r.X(k.a.a/100),a7,!0))}a2.push(new A.aa(B.ix,A.j("Lucro sem capital novo: o cliente paga para empurrar o vencimento e o principal continua na rua. O percentual \xe9 a fatia do lucro de cada janela, e a m\xe9dia exclui os meses em que n\xe3o houve nenhuma renova\xe7\xe3o.",a7,a7,a7,a7,a9?a7:s.an(b0.y),a7,a7,a7),a7))
 a2.push(B.en)
-a9=f==null?"Realizado no ano":"Realizado at\xe9 "+f
-b0=q.w.a
-a2.push(A.cS(b2,a9,r.X(b0/100),a7,!1))
-a9=q.f
-a9=a9===1?"Falta 1 m\xeas \u2014 proje\xe7\xe3o":"Faltam "+a9+" meses \u2014 proje\xe7\xe3o"
+a8=f==null?"Realizado no ano":"Realizado at\xe9 "+f
+a9=q.w.a
+a2.push(A.cS(b1,a8,r.X(a9/100),a7,!1))
+a8=q.f
+a8=a8===1?"Falta 1 m\xeas \u2014 proje\xe7\xe3o":"Faltam "+a8+" meses \u2014 proje\xe7\xe3o"
 s=q.r.a
-a2.push(A.cS(b2,a9,r.X(s/100),a7,!1))
-a2.push(A.cS(b2,"Ano fechado (estimado)",r.X((b0+s)/100),m,!0))
-if(o!=null){a9=r.X(p/100)
-b0=o>=0
-s=b0?"+":""
+a2.push(A.cS(b1,a8,r.X(s/100),a7,!1))
+a2.push(A.cS(b1,"Ano fechado (estimado)",r.X((a9+s)/100),m,!0))
+if(o!=null){a8=r.X(p/100)
+a9=o>=0
+s=a9?"+":""
 r=B.o.am(o*100)
-b0=b0?m:b1.r
-a2.push(A.cS(b2,"Contra o ano anterior ("+a9+")",s+r+"%",b0,!1))}return A.BU(b2,"Lucro",new A.bz(A.as(a2,B.az,B.w,B.D),B.aG,a7,a7))}}
+a9=a9?m:b0.r
+a2.push(A.cS(b1,"Contra o ano anterior ("+a8+")",s+r+"%",a9,!1))}return A.BU(b1,"Lucro",new A.bz(A.as(a2,B.az,B.w,B.D),B.aG,a7,a7))}}
 A.bcR.prototype={
 $2(a,b){return new A.am(a.a+b.e.a)},
 $S:104}
