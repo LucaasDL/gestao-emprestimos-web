@@ -34,6 +34,41 @@
 
   <title>Gestão de Empréstimos</title>
   <link rel="manifest" href="manifest.json">
+
+  <!--
+    ABERTURA DO APP — dicas de rede. Medido em 18/11/2026, porque ele relatou
+    "o painel está lento pra abrir".
+
+    Nenhuma destas linhas muda comportamento: se o navegador ignorar, o app
+    carrega exatamente como antes. Elas só adiantam o que de outro modo começa
+    tarde.
+
+    1. O `main.dart.js` (1,46 MB em gzip, o maior arquivo nosso) só COMEÇAVA a
+       ser baixado depois de buscar E executar o `flutter_bootstrap.js` — uma
+       ida e volta inteira de espera, que no celular é o que mais pesa.
+       `preload` o põe na fila junto com o HTML.
+       `as="script"` casa com o `type="application/javascript"` que o
+       carregador do Flutter usa (conferido no `flutter_bootstrap.js`:
+       `createScriptTag` → `t.type="application/javascript"`). Errar o `as`
+       faria o navegador baixar o arquivo DUAS vezes, então isto não é
+       detalhe cosmético.
+
+    2. O CanvasKit vem de `www.gstatic.com` (2,17 MB em brotli, cache de 1 ano
+       — não é baixado de novo a cada publicação) e a fonte Inter de
+       `fonts.gstatic.com` (4 arquivos, 606 KB). Sem `preconnect`, o DNS e o
+       TLS dessas origens só começam quando o Dart pede o arquivo; no celular
+       é de 300 a 600 ms cada aperto de mão, em série.
+
+    3. O Supabase é a terceira origem: as seis chamadas do painel saem logo
+       depois de o app ligar. A URL não é segredo (ela já vai dentro do
+       bundle publicado), mas está repetida aqui — mudando de projeto, este
+       arquivo precisa mudar junto. `preconnect` para origem errada é
+       inofensivo: desperdiça um aperto de mão e nada mais.
+  -->
+  <link rel="preload" href="main.dart.js" as="script">
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://othzbbmrdwxnzmnhrhlu.supabase.co" crossorigin>
 </head>
 <body>
   <!--
