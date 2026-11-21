@@ -43,15 +43,18 @@
     carrega exatamente como antes. Elas só adiantam o que de outro modo começa
     tarde.
 
-    1. O `main.dart.js` (1,46 MB em gzip, o maior arquivo nosso) só COMEÇAVA a
-       ser baixado depois de buscar E executar o `flutter_bootstrap.js` — uma
-       ida e volta inteira de espera, que no celular é o que mais pesa.
-       `preload` o põe na fila junto com o HTML.
-       `as="script"` casa com o `type="application/javascript"` que o
-       carregador do Flutter usa (conferido no `flutter_bootstrap.js`:
-       `createScriptTag` → `t.type="application/javascript"`). Errar o `as`
-       faria o navegador baixar o arquivo DUAS vezes, então isto não é
-       detalhe cosmético.
+    1. ⚠️ O `preload` do `main.dart.js` que existia aqui SAIU em 21/11/2026,
+       quando a publicação passou a usar `--wasm`. Ele adiantava o download do
+       maior arquivo nosso, e era um ganho real enquanto havia um pacote só.
+       Com dois builds no mesmo pacote (wasm e o js de reserva) ele vira
+       DEFEITO: é uma tag estática, não sabe qual dos dois o navegador vai
+       escolher, e força o download do JS mesmo quando o wasm é o escolhido.
+       Medido antes de tirar — o navegador baixava os DOIS, 1,28 MB em gzip
+       de JavaScript que nunca seria executado.
+       Preload do `.wasm` no lugar teria o defeito espelhado, penalizando
+       quem cai no caminho de reserva. Detecção de WasmGC aqui dentro
+       duplicaria o que o `flutter_bootstrap.js` já faz, num app de dinheiro,
+       para ganhar uma ida e volta. Então: nenhum preload.
 
     2. O CanvasKit vem de `www.gstatic.com` (2,17 MB em brotli, cache de 1 ano
        — não é baixado de novo a cada publicação) e a fonte Inter de
@@ -65,7 +68,6 @@
        arquivo precisa mudar junto. `preconnect` para origem errada é
        inofensivo: desperdiça um aperto de mão e nada mais.
   -->
-  <link rel="preload" href="main.dart.js" as="script">
   <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://othzbbmrdwxnzmnhrhlu.supabase.co" crossorigin>
