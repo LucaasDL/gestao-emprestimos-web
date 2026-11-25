@@ -17,6 +17,8 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  # Para o passo de espera abaixo poder listar os artefatos da propria corrida.
+  actions: read
 
 # Uma publicacao por vez; nao cancela a que ja esta rodando.
 concurrency:
@@ -36,6 +38,40 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
+      # O `deploy-pages` pede os metadados do artefato a API e falha NA HORA se
+      # ela ainda nao o enxerga -- ele nao tenta de novo nesse caso.
+      #
+      # Medido em 25/11/2026, na corrida 45713683868:
+      #   22:29:57.75  "Artifact github-pages has been successfully uploaded!
+      #                 ... Artifact ID is 15067734475"
+      #   22:29:58.50  "No artifacts named github-pages were found"
+      # 0,75 s entre gravar e nao achar. E consistencia eventual da API, e e
+      # isso que explica a intermitencia: as corridas que passavam levavam
+      # 31-72 s e as que falhavam, 18-20 s. Em 25/11 falharam QUATRO seguidas,
+      # inclusive uma sozinha -- entao nao era a disputa entre o push e o
+      # workflow_dispatch que o CLAUDE.md suspeitava.
+      #
+      # Esperar e barato quando a API esta rapida (sai na 1a volta) e paciente
+      # quando nao esta. Falha ALTO depois de 150 s, em vez de publicar nada e
+      # deixar o site velho no ar sem aviso.
+      - name: Esperar o artefato aparecer na API
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 30); do
+            n=$(gh api \
+              "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts" \
+              --jq '[.artifacts[] | select(.name == "github-pages")] | length')
+            if [ "$n" -ge 1 ]; then
+              echo "artefato visivel na API na tentativa $i"
+              exit 0
+            fi
+            echo "ainda nao visivel (tentativa $i), esperando 5s..."
+            sleep 5
+          done
+          echo "::error::o artefato github-pages nao apareceu na API em 150s"
+          exit 1
+
       - name: Publicar
         id: deploy
         uses: actions/deploy-pages@v4
