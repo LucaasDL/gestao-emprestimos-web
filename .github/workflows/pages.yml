@@ -6,6 +6,42 @@
 #
 # O deploy_web.ps1 nao muda: ele continua fazendo push nesta branch, e este
 # workflow publica o conteudo como esta (sem Jekyll).
+#
+# ----------------------------------------------------------------------------
+# 25/11/2026 -- POR QUE v5 E NAO O PAR v3+v4 QUE ESTAVA AQUI
+#
+# Em 25/11 falharam QUATRO publicacoes seguidas, sempre com:
+#   "No artifacts named github-pages were found for this workflow run"
+# ...logo depois de o proprio passo anterior dizer:
+#   "Artifact github-pages has been successfully uploaded! Artifact ID is ..."
+#
+# O que NAO era, medido e descartado:
+#  - nao era a disputa entre o `push` e o `workflow_dispatch` que o
+#    deploy_web.ps1 faz (o CLAUDE.md suspeitava disso): uma corrida SOZINHA,
+#    disparada a mao, falhou igual;
+#  - nao era consistencia eventual da API: pus um passo que esperava o artefato
+#    aparecer em `/actions/runs/<id>/artifacts` e ele apareceu na PRIMEIRA
+#    tentativa, 0,4 s depois do upload -- e o deploy-pages, logo em seguida,
+#    continuou dizendo que nao existia. O passo foi removido junto com esta
+#    nota, porque guardar protecao construida sobre teoria errada e pior do
+#    que nao ter nenhuma.
+#
+# O que ERA: a quebra do Node 20 -> 24. O aviso da propria corrida nomeia
+# `upload-artifact@v4` e `deploy-pages@v4` como "forced to run on Node.js 24",
+# e o GitHub chegou a publicar uma tag `deploy-pages v3.0.2-node.24` so para
+# isso. O artefato passou a ser GRAVADO por um backend e PROCURADO por outro.
+#
+# O par novo resolve na raiz: `upload-pages-artifact@v5` usa
+# `upload-artifact@v7` por dentro, e `deploy-pages@v5` roda em `node24`
+# nativo (`using: 'node24'` no action.yml dele), em vez de ser forcado.
+#
+# As entradas e saidas sao as mesmas (`path`, `name`, `page_url`), entao a
+# troca e so de versao.
+#
+# NAO mexido de proposito: `checkout@v4` e `configure-pages@v5` aparecem no
+# mesmo aviso de Node 20, mas nao falharam. Bumpar quatro acoes de uma vez
+# tornaria a proxima falha dificil de atribuir.
+# ----------------------------------------------------------------------------
 name: Publicar no Pages
 
 on:
@@ -17,8 +53,6 @@ permissions:
   contents: read
   pages: write
   id-token: write
-  # Para o passo de espera abaixo poder listar os artefatos da propria corrida.
-  actions: read
 
 # Uma publicacao por vez; nao cancela a que ja esta rodando.
 concurrency:
@@ -35,43 +69,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
       - name: Empacotar o site
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: .
-      # O `deploy-pages` pede os metadados do artefato a API e falha NA HORA se
-      # ela ainda nao o enxerga -- ele nao tenta de novo nesse caso.
-      #
-      # Medido em 25/11/2026, na corrida 45713683868:
-      #   22:29:57.75  "Artifact github-pages has been successfully uploaded!
-      #                 ... Artifact ID is 15067734475"
-      #   22:29:58.50  "No artifacts named github-pages were found"
-      # 0,75 s entre gravar e nao achar. E consistencia eventual da API, e e
-      # isso que explica a intermitencia: as corridas que passavam levavam
-      # 31-72 s e as que falhavam, 18-20 s. Em 25/11 falharam QUATRO seguidas,
-      # inclusive uma sozinha -- entao nao era a disputa entre o push e o
-      # workflow_dispatch que o CLAUDE.md suspeitava.
-      #
-      # Esperar e barato quando a API esta rapida (sai na 1a volta) e paciente
-      # quando nao esta. Falha ALTO depois de 150 s, em vez de publicar nada e
-      # deixar o site velho no ar sem aviso.
-      - name: Esperar o artefato aparecer na API
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          for i in $(seq 1 30); do
-            n=$(gh api \
-              "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts" \
-              --jq '[.artifacts[] | select(.name == "github-pages")] | length')
-            if [ "$n" -ge 1 ]; then
-              echo "artefato visivel na API na tentativa $i"
-              exit 0
-            fi
-            echo "ainda nao visivel (tentativa $i), esperando 5s..."
-            sleep 5
-          done
-          echo "::error::o artefato github-pages nao apareceu na API em 150s"
-          exit 1
-
       - name: Publicar
         id: deploy
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
